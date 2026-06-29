@@ -5,7 +5,9 @@ let inputVal = document.getElementById("input-val");
 let fromUnit = document.getElementById("from-unit");
 let toUnit = document.getElementById("to-unit");
 
-let convertBtn = document.getElementById("convert-btn");
+let convertBtn = document.getElementById("convert-btn")
+//addEventListener method for function onclick
+convertBtn.addEventListener("click", convert);
 
 let outputVal = inputVal;
 
@@ -27,6 +29,7 @@ convertBtn.addEventListener("click", function() {
   }
 });
 
+//if/else statements
 function convert() {
   if (fromUnit.value == "kilometer" && toUnit.value == "meter") {
     outputVal = inputVal.value * 1000;
@@ -45,11 +48,6 @@ function convert() {
   }
   document.getElementById("output-value").innerHTML = "Converted to: " + outputVal;
 }
-
-
-document.getElementById("convert-btn").addEventListener("click", convert);
-
-
 
 //Conversion Sequences using if/else statements
 //Yo developer, fix this shit up please, thanks
